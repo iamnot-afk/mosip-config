@@ -1,0 +1,12 @@
+{
+  "amr_acr_mapping": {
+    "mosip:idp:acr:generated-code": ["mosip:idp:acr:generated-code"],
+    "mosip:idp:acr:biometrics": ["mosip:idp:acr:biometrics"],
+    "mosip:idp:acr:linked-wallet": ["mosip:idp:acr:linked-wallet"]
+  },
+  "acr_amr_mapping": {
+    "mosip:idp:acr:generated-code": ["OTP"],
+    "mosip:idp:acr:biometrics": ["BIOMETRICS"],
+    "mosip:idp:acr:linked-wallet": ["LINKED_WALLET"]
+  }
+}
