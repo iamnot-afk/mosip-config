@@ -59,7 +59,7 @@ keycloak.internal.url=http://keycloak.keycloak
 # Ingress URLs - using internal services for development
 mz.ingress.base.url=http://masterdata-real.kernel
 dmz.ingress.base.url=http://regproc-pktserver.regproc
-mosip.admin-hotlist-service.url=http://admin-hotlist.admin:80
+mosip.admin-hotlist-service.url=http://admin-hotlist-service.default:80
 mosip.admin-service.url=http://admin-service.default:80
 mosip.admin-ui.url=http://admin-ui.default:80
 mosip.artifactory-service.url=http://artifactory-service.default:80
@@ -137,7 +137,7 @@ mosip.websub.url=http://websub.websub
 keycloak.external.host=admin.sandbox.xyz.net:31203
 
 mosip.mosip.admin.client.secret={cipher}d1eac77ebe38f6a4b735a5a51055d2a8f71b9669ee68e78564b5d27a7b61f960
-mosip.mosip.regproc.client.secret=B8cUiApM06JCZMm1STQgv0UMx86aGACD
+mosip.mosip.regproc.client.secret={cipher}9f6a1d9751bdd7e59ca3a9dbe66b47db3ecb7025e66a6746911de2bd841c804f
 mosip.mosip.auth.client.secret={cipher}9f6a1d9751bdd7e59ca3a9dbe66b47db3ecb7025e66a6746911de2bd841c804f
 mosip.mosip.ida.client.secret={cipher}9f6a1d9751bdd7e59ca3a9dbe66b47db3ecb7025e66a6746911de2bd841c804f
 mosip.mosip.reg.client.secret={cipher}9f6a1d9751bdd7e59ca3a9dbe66b47db3ecb7025e66a6746911de2bd841c804f
@@ -631,7 +631,7 @@ auth.server.admin.issuer.internal.uri=http://10.43.169.48:80/auth/realms/mosip
 
 # Direct token endpoint URL (bypass URL concatenation)
 auth.server.admin.oidc.token.path=/auth/realms/mosip/protocol/openid-connect/token
-mosip.iam.adapter.self.token.endpoint=http://keycloak.keycloak/auth/realms/mosip/protocol/openid-connect/token
+mosip.iam.adapter.self.token.endpoint=http://10.43.169.48:80/auth/realms/mosip/protocol/openid-connect/token
 
 # Disable WebClient-based self-token renewal (use RestTemplate path instead)
-mosip.iam.adapter.self-token-renewal-enable=true
+mosip.iam.adapter.self-token-renewal-enable=false
