@@ -470,7 +470,7 @@
             <to uri="workflow-cmd://anonymous-profile" />
          </when>
          <otherwise>
-            <to uri="eventbus://biometric-extraction-bus-in" />
+            <to uri="eventbus://finalization-bus-in" /> <!-- BYPASS biometric-extraction for mock testing -->
             <to uri="workflow-cmd://anonymous-profile" />
          </otherwise>
       </choice>
