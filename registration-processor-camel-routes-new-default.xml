@@ -547,4 +547,10 @@
          </otherwise>
       </choice>
    </route>
+   <!-- Forwarding route for reprocessor compatibility -->
+   <route id="credential-requestor-bus-forward">
+      <from uri="eventbus://credential-requestor-bus-in" />
+      <log message="credential-requestor-bus-in forwarding to printing-bus-in ${bodyAs(String)}" />
+      <to uri="eventbus://printing-bus-in" />
+   </route>
 </routes>
